@@ -7,4 +7,4 @@ datasets
 sentence_transformers
 ragas
 pdfminer
-weaviate
+weaviate-client
