@@ -202,7 +202,7 @@ def load_chat_model():
     '''
     return HuggingFaceHub(
     repo_id="mistralai/Mistral-7B-Instruct-v0.1",
-    huggingfacehub_api_token = "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",
+    huggingfacehub_api_token = st.secrets["HUGGINGFACEHUB_API_TOKEN"],
     model_kwargs={"temperature": 0.5, "max_length": 64,"max_new_tokens":512, "query_wrapper_prompt":template}
 )
 
@@ -226,6 +226,12 @@ re.model_prep(chat_model, mistral_parser) # model details
 
 st.title('RAG Bot')
 st.subheader('Converse with our Chatbot')
+st.text("Some sample questions to ask:")
+st.markdown("- What are adjustment points in the context of using a microscope, and why are they important?")
+st.markdown("- What does alignment accuracy refer to, and how is it achieved in a microscopy context?")
+st.markdown("- What are alignment marks, and how are they used in the alignment process?")
+st.markdown("- What is the alignment process in lithography, and how does eLitho facilitate this procedure?")
+st.markdown("- What can you do with the insertable layer in Smart FIB?")
 
 if 'messages' not in st.session_state:
     st.session_state.messages = []
