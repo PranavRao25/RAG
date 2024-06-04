@@ -211,7 +211,7 @@ cross_encoder = load_cross_encoder()
 chat_model = load_chat_model()
 
 #file_path = 'software_data.txt'
-file_path = "ll_dataset.txt"
+file_path = "software_data.txt"
 # HUGGINGFACEHUB_API_TOKEN = "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"
 url = st.secrets["WEAVIATE_URL"]
 v_key = st.secrets["WEAVIATE_V_KEY"]
