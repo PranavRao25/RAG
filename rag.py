@@ -202,7 +202,7 @@ def load_chat_model():
     '''
     return HuggingFaceHub(
     repo_id="mistralai/Mistral-7B-Instruct-v0.1",
-    huggingfacehub_api_token = st.secrets["HUGGINGFACEHUB_API_TOKEN"],
+    huggingfacehub_api_token = "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",
     model_kwargs={"temperature": 0.5, "max_length": 64,"max_new_tokens":512, "query_wrapper_prompt":template}
 )
 
