@@ -29,7 +29,6 @@ from ragas.metrics import faithfulness, answer_correctness, answer_similarity
 from ragas import evaluate
 from typing import Sequence
 import pandas as pd
-from pdfminer.high_level import extract_text
 
 
 class SentenceTransformerEmbeddings:
@@ -95,12 +94,8 @@ class RAGEval:
 
     def vector_db(self,file_path, url, api_key, embed_model): # file_path is the file of dataset
         # Read the content of the file
-
-        if(file_path.find('pdf')==-1):
-          with open(file_path, 'rb') as file:
-              data = file.read()
-        else:
-          data = extract_text(file_path)
+        with open(file_path, 'rb') as file:
+            data = file.read()
 
         # Create a Document object
         documents = [Document(page_content=data)]

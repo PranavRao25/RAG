@@ -6,5 +6,4 @@ langchain_community
 datasets
 sentence_transformers
 ragas
-pdfminer
 weaviate-client
