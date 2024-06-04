@@ -1,0 +1,11 @@
+langchain_openai
+requests
+langchain
+weaviate
+os
+langchain_community
+datasets
+sentence_transformers
+ragas
+streamlit
+pdfminer
