@@ -2,7 +2,6 @@ streamlit
 langchain_openai
 requests
 langchain
-os
 langchain_community
 datasets
 sentence_transformers
